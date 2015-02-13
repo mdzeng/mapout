@@ -1,0 +1,106 @@
+#map {
+	position: absolute;
+	top:0;
+	bottom:0;
+	width: 100%;
+	opacity: 0.5;
+}
+
+.locator-selector {
+	position: absolute;
+	left: 5%;
+	top: 3%;
+}
+
+.legend {
+	position: absolute;
+	background-color: #252525;
+	width: 370px;
+	height: 300px;
+	right: 1%;
+	bottom: 2%;
+	border-radius: 10px;
+	padding: 0 25px;
+	opacity: 0.9;
+	overflow-y: scroll;
+	color: #eaeaea;
+	font-family: 'helvetica';
+}
+
+.legend-name {
+	width: 250px;
+	background-color: #4f535e;
+	height: 25px;
+	padding: 10px 0 0 10px;
+	font-size: 16px;
+	color: #eaeaea;
+	margin: 10px;
+}
+
+.delete {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	margin-top: 8px;
+	background: url('../images/trash.png');
+	background-color: #4f535e;
+	border-radius: 10px;
+}
+
+input {
+	margin: 5px
+	width: 150px
+}
+
+input[type="color"] {
+	position: relative;
+	width: 25px;
+	height: 25px;
+	top: -21px;
+}
+
+input[type="text"] {
+	height: 30px;
+	width: 400px;
+	border-radius: 3px;
+	font-size: 16px;
+	padding-left: 12px;
+}
+
+input[type="submit"] {
+	background: url('../images/search-icon.png');
+	position: absolute;
+	width: 45px;
+	height: 35px;
+	margin-top: 0px;
+
+	background: url('../images/search-icon.png');
+	background-color: #cccccc;
+	border-radius: 3px;
+}
+
+.blinking {
+	-webkit-animation: 1s blink step-end infinite;
+	-moz-animation: 1s blink step-end infinite;
+	-ms-animation: 1s blink step-end infinite;
+	-o-animation: 1s blink step-end infinite;
+	animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+	from,to {
+	color: transparent;
+	}
+	50% {
+		color: black;
+	}
+}
+
+@-webkit-keyframes blink {
+	from,to {
+	color: transparent;
+	}
+	50% {
+		color: black;
+	}
+}
