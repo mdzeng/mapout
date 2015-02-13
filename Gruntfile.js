@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
 		browserify: {
 			client: {
-				src: ['views/components/**/*.jsx'],
+				src: ['views/components/**/*.jsx', 'lib/client/*.js'],
 				dest: 'public/js/built_components.js',
 				options: {
 					alias: [
@@ -57,6 +57,7 @@ module.exports = function(grunt) {
 		watch: {
 			client: {
 				files: [
+					'lib/**/*.js',
 					'views/components/**/*.jsx'
 				],
 				tasks: ['browserify']

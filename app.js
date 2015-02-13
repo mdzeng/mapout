@@ -11,7 +11,8 @@ var path = require('path');
 var templating = require('./lib/templating');
 var app = express();
 var url = require('url');
-
+var geocoder = require('node-geocoder').getGeocoder('google');
+var util = require('util');
 
 // all environments
 app.engine('.html', templating);
@@ -35,6 +36,17 @@ if ('development' == app.get('env')) {
 
 app.get('/', function (req, res) {
     res.render('landing');
+});
+
+app.get('/location', function(req, res) {
+	res.header('Access-Control-Allow-Origin', "*");
+	geocoder.geocode(req.query.location)
+	.then(function(geocodeResponse) {
+		res.send(200, geocodeResponse);
+	})
+	.catch(function(err) {
+		res.send(500, 'Error retrieving location for address');
+	})
 });
 
 //When routes are set up, use the routes middleware
