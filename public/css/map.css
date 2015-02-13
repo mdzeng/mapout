@@ -79,12 +79,18 @@ input[type="submit"] {
 	border-radius: 3px;
 }
 
-.blinking {
-	-webkit-animation: 1s blink step-end infinite;
-	-moz-animation: 1s blink step-end infinite;
-	-ms-animation: 1s blink step-end infinite;
-	-o-animation: 1s blink step-end infinite;
-	animation: 1s blink step-end infinite;
+.container {
+	visibility: visible;
+	opacity:1;
+	transition:visibility 1s linear 0.5s,opacity 0.5s linear;
+	-webkit-transition: visibility 1s linear 0.5s,opacity 0.5s linear;
+	-moz-transition: visibility 1s linear 0.5s,opacity 0.5s linear;
+	-o-transition: visibility 1s linear 0.5s,opacity 0.5s linear;
+}
+
+.empty {
+	visibility: hidden;
+	opacity: 0;
 }
 
 @keyframes blink {

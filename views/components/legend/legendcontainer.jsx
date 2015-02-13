@@ -11,7 +11,7 @@ module.exports = React.createClass({
 
 	render: function() {
 		return (
-			<div className="legend">
+			<div className={(this.props.features.length > 0 ? "container" : "empty") + " legend"}>
 				<h2>Legend</h2>
 				{
 					_.map(this.props.features, function(feature) {

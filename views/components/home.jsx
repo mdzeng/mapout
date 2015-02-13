@@ -9,7 +9,7 @@ module.exports = React.createClass({
 			<div>
 				<Map
 					accessToken="pk.eyJ1IjoibWR6ZW5nIiwiYSI6InhoSG81ZTQifQ.LovD-K5qM2thM-5AR7KavQ"
-					map="mdzeng.k62j958b"
+					mapTitle="mdzeng.k62j958b"
 				/>
 			</div>
 		);
